@@ -3,86 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="about">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">Portfolio</div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="title">Welcome to My Portfolio</h1>
+            <p class="subtitle">Full-Stack Developer & Designer</p>
+            <button class="cta-button">View My Work</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
         <h2>About Me</h2>
-        <p>This is a brief introduction about myself.</p>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Passionate developer with expertise in modern web technologies.</p>
+            </div>
+            <div class="skills">
+                <div class="skill-item" data-skill="HTML">95%</div>
+                <div class="skill-item" data-skill="CSS">90%</div>
+                <div class="skill-item" data-skill="JavaScript">85%</div>
+            </div>
+        </div>
     </section>
-    <section id="projects">
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
         <h2>My Projects</h2>
-        <p>Details about my projects will go here.</p>
+        <div class="project-grid">
+            <!-- Project cards will be dynamically added by JavaScript -->
+        </div>
     </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Contact information will go here.</p>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <input type="text" id="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" required placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <textarea id="message" required placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
     </section>
-    <footer>
-        <section id="contact-info">
-            <h2>Contact Information</h2>
-            <p>Kaushal Kumar</p>
-            <p>Email: kau333halkumar@gmail.com</p>
-            <p>Phone: 9996626984</p>
-            <p>Location: 141, Matanhail, Jhajjar, Haryana</p>
-        </section>
-        <section id="summary">
-            <h2>Summary</h2>
-            <p>I am a Computer Science Engineering student at Chandigarh University with a CGPA of 8.5, skilled in C++, SQL, and React. I have developed a ChatGPT-integrated webpage and a fitness app, showcasing my proficiency in software development.</p>
-        </section>
-        <section id="technical-skills">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li>Programming Languages: C++, Python, SQL</li>
-                <li>Software Development: Full-stack development, including React</li>
-                <li>Data Mining and Analysis</li>
-            </ul>
-        </section>
-        <section id="professional-experience">
-            <h2>Professional Experience</h2>
-            <h3>Full-stack Developer Intern at Optimus Expert</h3>
-            <p>Duration: Oct 2024 (1 month) | Location: Chandigarh, India (Remote)</p>
-            <h3>Summer Internship at Metacrafters</h3>
-            <p>Duration: May 2023 - Aug 2023 (4 months) | Location: Chandigarh, India (Remote)</p>
-            <h3>Social Internship at Chandigarh University</h3>
-            <p>Duration: Jun 2023 - Jul 2023 (2 months) | Location: India (Hybrid)</p>
-        </section>
-        <section id="education">
-            <h2>Education</h2>
-            <h3>Chandigarh University</h3>
-            <p>Bachelor of Engineering in Computer Science | CGPA: 8.5 | Start Year: 2022</p>
-            <h3>Army Public School, Ambala Cantt</h3>
-            <p>12th Grade: 73.8% | Completion Year: 2022</p>
-            <p>10th Grade: 78.6% | Completion Year: 2019</p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <h3>ChatGPT Integration Webpage</h3>
-            <p>Developed a dynamic web page using React and JavaScript, integrating the ChatGPT API for real-time AI interactions.</p>
-            <h3>Fitness Application</h3>
-            <p>Designed a comprehensive fitness app with intricate animations and a user-friendly interface.</p>
-        </section>
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <ul>
-                <li>JS PROOF (JavaScript Beginner Course) – Metacrafters</li>
-                <li>ETH PROOF (Beginner EVM Course) – Metacrafters</li>
-                <li>Additional Coursera Certifications in software development and front-end technologies.</li>
-            </ul>
-        </section>
-        <p>&copy; 2023 My Portfolio</p>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2025 Your Portfolio. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
